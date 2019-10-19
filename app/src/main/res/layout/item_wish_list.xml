@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/page_bg_dim"
+        android:orientation="vertical"
+        android:paddingTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/ivProductImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:scaleType="centerCrop"
+                android:src="@color/imgPlaceholder" />
+
+            <LinearLayout
+                android:id="@+id/lytProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivProductImage"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/pad_margin_5dp"
+                android:paddingTop="@dimen/pad_margin_10dp"
+                android:weightSum="1">
+
+                <com.mcc.fshopper.view.MontserratTextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".9"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Xiaomi power bank "
+                    android:textColor="@color/product_name_color"
+                    android:textSize="14sp" />
+
+
+                <ImageButton
+                    android:id="@+id/ivRemoveWish"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight=".1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="2dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_delete" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lytProductName"
+                android:layout_toRightOf="@+id/ivProductImage"
+                android:layout_marginTop="@dimen/pad_margin_5dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight=".10"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_fb_like"/>
+
+                <com.mcc.fshopper.view.RobotoTextView
+                    android:id="@+id/tvLikeCounter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".15"
+                    android:textColor="@color/price_color"
+                    android:textSize="@dimen/txt_size_12sp"
+                    android:text="0"/>
+
+                <com.mcc.fshopper.view.RobotoTextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".75"
+                    android:gravity="right"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/price_color"
+                    android:textSize="@dimen/txt_size_12sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:background="@color/toolbar_boarder" />
+
+    </LinearLayout>
+
+</LinearLayout>

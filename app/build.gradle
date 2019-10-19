@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.mcc.fshopper"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 2
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:27.0.1'
+    compile 'com.android.support:design:27.0.1'
+    compile 'com.android.support:cardview-v7:27.0.1'
+    compile 'com.stripe:stripe-android:4.1.3'
+    compile 'com.github.bumptech.glide:glide:3.8.0'
+    compile 'com.facebook.android:account-kit-sdk:4.26.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.25.0'
+    compile 'com.google.firebase:firebase-core:11.6.0'
+    compile 'com.google.firebase:firebase-messaging:11.6.0'
+    compile 'com.google.firebase:firebase-ads:11.6.0'
+    compile 'com.google.firebase:firebase-auth:11.6.0'
+    compile 'com.google.android.gms:play-services-auth:11.6.0'
+    compile('com.google.api-client:google-api-client-android:1.23.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    compile('com.google.apis:google-api-services-sheets:v4-rev491-1.23.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    compile 'me.relex:circleindicator:1.2.2@aar'
+    compile 'com.github.curioustechizen.android-ago:library:1.3.4'
+
+}
+apply plugin: 'com.google.gms.google-services'
+
